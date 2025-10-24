@@ -1,9 +1,7 @@
-// Strategy interface
 interface Tactic {
     void playStyle();
 }
 
-// Concrete strategies
 class OffensiveTactic implements Tactic {
     @Override
     public void playStyle() {
@@ -25,7 +23,6 @@ class PossessionTactic implements Tactic {
     }
 }
 
-// Context class
 class FootballTeam {
     private Tactic tactic;
     private String teamName;
@@ -48,10 +45,9 @@ class FootballTeam {
     }
 }
 
-// Main class
 public class FootballStrategy {
     public static void main(String[] args) {
-        FootballTeam team = new FootballTeam("Astana United");
+        FootballTeam team = new FootballTeam("Manchester United");
 
         team.setTactic(new OffensiveTactic());
         team.startMatch();
